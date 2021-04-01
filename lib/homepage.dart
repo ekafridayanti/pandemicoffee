@@ -13,10 +13,10 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.green[900],
+        backgroundColor: Colors.brown[700],
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[Text("Coffee Pandemi")],
+          children: <Widget>[Text("Pandemi Coffee")],
         ),
         actions: <Widget>[
           IconButton(
@@ -87,7 +87,7 @@ class _HomePageState extends State<HomePage> {
               title: new Text('Setting'),
               trailing: new Icon(Icons.settings),
               onTap: () {
-                print("Click Start");
+                print("click");
               },
             ),
           ],
@@ -99,11 +99,34 @@ class _HomePageState extends State<HomePage> {
           children: <Widget>[
             //promo screen
             Padding(
-              padding: EdgeInsets.all(16),
+              padding: const EdgeInsets.only(right: 45.0, left: 20.0),
               child: Text(
-                "It's A Great Day Having A  Coffee!",
-                style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+                "Welcome,",
+                style: TextStyle(
+                    fontSize: 30.0,
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xFF473D3A)),
               ),
+            ),
+            SizedBox(
+              height: 8.0,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(right: 45.0, left: 20.0),
+              child: Container(
+                child: Text(
+                  'Let\'s select the best taste for your next coffee break!',
+                  style: TextStyle(
+                    fontFamily: 'nunito',
+                    fontSize: 17.0,
+                    fontWeight: FontWeight.w300,
+                    color: Color(0xFFB0AAA7),
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 8.0,
             ),
             Image.asset("assets/images/header.jpg"),
             Container(
@@ -201,158 +224,213 @@ class _HomePageState extends State<HomePage> {
               height: 144,
               margin: EdgeInsets.only(left: 16, right: 16),
               //membuat column untuk membuat 2 column katagori
-              child: Column(
-                children: <Widget>[
-                  //membuat row untuk membuat baris kategori 1 pada column 1
-                  Row(
-                    children: <Widget>[
-                      Expanded(
-                        child: Container(
-                          margin: EdgeInsets.only(right: 8),
-                          padding: EdgeInsets.only(left: 16),
-                          height: 64,
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(12),
-                              border: Border.all(
-                                  color: Colors.brown[50], width: 1)),
-                          child: Row(
-                            children: <Widget>[
-                              Image.asset("assets/images/all.png",
-                                  fit: BoxFit.contain),
-                              Padding(
-                                padding: EdgeInsets.only(left: 16),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: <Widget>[
-                                    Text('All Coffee'),
-                                    Text(
-                                      'Much Better',
-                                      style: TextStyle(fontSize: 10),
-                                    )
-                                  ],
-                                ),
-                              )
-                            ],
+              child: SingleChildScrollView(
+                child: Column(
+                  children: <Widget>[
+                    //membuat row untuk membuat baris kategori 1 pada column 1
+                    Row(
+                      children: <Widget>[
+                        Expanded(
+                          child: Container(
+                            margin: EdgeInsets.only(right: 8),
+                            padding: EdgeInsets.only(left: 16),
+                            height: 64,
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(12),
+                                border: Border.all(
+                                    color: Colors.brown[50], width: 1)),
+                            child: Row(
+                              children: <Widget>[
+                                Image.asset("assets/images/all.png",
+                                    fit: BoxFit.contain),
+                                Padding(
+                                  padding: EdgeInsets.only(left: 16),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: <Widget>[
+                                      Text('All Coffee'),
+                                      Text(
+                                        'Much Better',
+                                        style: TextStyle(fontSize: 10),
+                                      )
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
                           ),
                         ),
-                      ),
-                      Expanded(
-                        child: Container(
-                          margin: EdgeInsets.only(right: 8),
-                          padding: EdgeInsets.only(left: 16),
-                          height: 64,
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(12),
-                              border: Border.all(
-                                  color: Colors.brown[50], width: 1)),
-                          child: Row(
-                            children: <Widget>[
-                              Image.asset("assets/images/promo.png",
-                                  fit: BoxFit.contain),
-                              Padding(
-                                padding: EdgeInsets.only(left: 16),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: <Widget>[
-                                    Text('Promotion'),
-                                    Text(
-                                      'Getting Easier',
-                                      style: TextStyle(fontSize: 10),
-                                    )
-                                  ],
-                                ),
-                              )
-                            ],
+                        Expanded(
+                          child: Container(
+                            margin: EdgeInsets.only(right: 8),
+                            padding: EdgeInsets.only(left: 16),
+                            height: 64,
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(12),
+                                border: Border.all(
+                                    color: Colors.brown[50], width: 1)),
+                            child: Row(
+                              children: <Widget>[
+                                Image.asset("assets/images/promo.png",
+                                    fit: BoxFit.contain),
+                                Padding(
+                                  padding: EdgeInsets.only(left: 16),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: <Widget>[
+                                      Text('Promotion'),
+                                      Text(
+                                        'Getting Easier',
+                                        style: TextStyle(fontSize: 10),
+                                      )
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
                           ),
                         ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 16,
-                  ),
-                  //membuat Row untuk row kedua pada column kedua
-                  Row(
-                    children: <Widget>[
-                      Expanded(
-                        child: Container(
-                          margin: EdgeInsets.only(right: 8),
-                          padding: EdgeInsets.only(left: 16),
-                          height: 64,
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(12),
-                              border: Border.all(
-                                  color: Colors.brown[50], width: 1)),
-                          //buat baris untuk image, teks kategori top coffee
-                          child: Row(
-                            children: <Widget>[
-                              Image.asset("assets/images/popular1.png",
-                                  fit: BoxFit.contain),
-                              Padding(
-                                padding: EdgeInsets.only(left: 16),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: <Widget>[
-                                    Text('Top Coffee'),
-                                    Text(
-                                      'Its Yummy',
-                                      style: TextStyle(fontSize: 10),
-                                    ),
-                                  ],
-                                ),
-                              )
-                            ],
+                      ],
+                    ),
+                    SizedBox(
+                      height: 16,
+                    ),
+                    //membuat Row untuk row kedua pada column kedua
+                    Row(
+                      children: <Widget>[
+                        Expanded(
+                          child: Container(
+                            margin: EdgeInsets.only(right: 8),
+                            padding: EdgeInsets.only(left: 16),
+                            height: 64,
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(12),
+                                border: Border.all(
+                                    color: Colors.brown[50], width: 1)),
+                            //buat baris untuk image, teks kategori top coffee
+                            child: Row(
+                              children: <Widget>[
+                                Image.asset("assets/images/popular1.png",
+                                    fit: BoxFit.contain),
+                                Padding(
+                                  padding: EdgeInsets.only(left: 16),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: <Widget>[
+                                      Text('Top Coffee'),
+                                      Text(
+                                        'Its Yummy',
+                                        style: TextStyle(fontSize: 10),
+                                      ),
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
                           ),
                         ),
-                      ),
-                      //membuat container untuk katageri Order
-                      Expanded(
-                        child: Container(
-                          margin: EdgeInsets.only(right: 8),
-                          padding: EdgeInsets.only(left: 16),
-                          height: 64,
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(12),
-                              border: Border.all(
-                                  color: Colors.brown[50], width: 1)),
-                          //membuat baris untuk katerogi Order
-                          child: Row(
-                            children: <Widget>[
-                              Image.asset("assets/images/order.png",
-                                  fit: BoxFit.contain),
-                              Padding(
-                                padding: EdgeInsets.only(left: 16),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: <Widget>[
-                                    Text('Order'),
-                                    Text(
-                                      'My Coffee',
-                                      style: TextStyle(fontSize: 10),
-                                    ),
-                                  ],
-                                ),
-                              )
-                            ],
+                        //membuat container untuk katageri Order
+                        Expanded(
+                          child: Container(
+                            margin: EdgeInsets.only(right: 8),
+                            padding: EdgeInsets.only(left: 16),
+                            height: 64,
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(12),
+                                border: Border.all(
+                                    color: Colors.brown[50], width: 1)),
+                            //membuat baris untuk katerogi Order
+                            child: Row(
+                              children: <Widget>[
+                                Image.asset("assets/images/order.png",
+                                    fit: BoxFit.contain),
+                                Padding(
+                                  padding: EdgeInsets.only(left: 16),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: <Widget>[
+                                      Text('Order'),
+                                      Text(
+                                        'My Coffee',
+                                        style: TextStyle(fontSize: 10),
+                                      ),
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
                           ),
                         ),
-                      ),
-                    ],
-                  ),
-                ],
+                      ],
+                    ),
+                    SizedBox(
+                      height: 15.0,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Text(
+                          'Explore nearby',
+                          style: TextStyle(
+                              fontFamily: 'varela',
+                              fontSize: 17.0,
+                              color: Color(0xFF473D3A)),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(right: 15.0),
+                          child: Text(
+                            'See All',
+                            style: TextStyle(
+                                fontFamily: 'varela',
+                                fontSize: 15.0,
+                                color: Color(0xFFCEC7C4)),
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 15.0),
+                    Container(
+                        height: 125.0,
+                        child: ListView(
+                            scrollDirection: Axis.horizontal,
+                            children: [
+                              _buildImage('assets/images/coffee.jpg'),
+                              _buildImage('assets/images/coffee2.jpg'),
+                              _buildImage('assets/images/coffee3.jpg')
+                            ])),
+
+                    SizedBox(height: 20.0)
+                  ],
+                ),
               ),
             )
           ],
         ),
       ),
     );
+  }
+
+  _buildImage(String imgPath) {
+    return Padding(
+        padding: EdgeInsets.only(right: 15.0),
+        child: Container(
+            height: 100.0,
+            width: 175.0,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15.0),
+                image: DecorationImage(
+                    image: AssetImage(imgPath), fit: BoxFit.cover))));
   }
 }

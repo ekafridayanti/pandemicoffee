@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 //import halaman yang akan diload kemusian beri alias
 import './homepage.dart' as HomePage;
 import './listmenu.dart' as ListCoffee;
+import 'iu/home.dart' as Home;
 
 //top level root
 void main() {
   runApp(new MaterialApp(
     title: "tab Bar",
+    debugShowCheckedModeBanner: false,
     home: new MyApp(),
   ));
 }
@@ -24,7 +26,7 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
   //tambah initState unutk inisialisasi dan mengaktifkan tab
   @override
   void initState() {
-    controller = new TabController(length: 2, vsync: this);
+    controller = new TabController(length: 3, vsync: this);
     super.initState();
   }
 
@@ -47,11 +49,12 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
           //pemanggil halaman dimulai dari alias.ClassName halaman yang diload
           new HomePage.HomePage(),
           new ListCoffee.ListCoffee(),
+          new Home.Home(),
         ],
       ),
       //membuat bottom tab
       bottomNavigationBar: new Material(
-        color: Colors.green[900],
+        color: Colors.brown[500],
         child: new TabBar(
           controller: controller,
           tabs: <Widget>[
@@ -59,6 +62,7 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
             //icon berurutan sesuai penggilan halaman
             new Tab(icon: new Icon(Icons.home)),
             new Tab(icon: new Icon(Icons.list)),
+            new Tab(icon: new Icon(Icons.add_chart)),
           ],
         ),
       ),

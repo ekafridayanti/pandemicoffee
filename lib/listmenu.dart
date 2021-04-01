@@ -6,7 +6,7 @@ class ListCoffee extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          backgroundColor: Colors.green,
+          backgroundColor: Color(0xFFDAB68C),
           title: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
